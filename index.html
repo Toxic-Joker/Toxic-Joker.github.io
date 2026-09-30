@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toxic-Joker // Red Team &amp; AI Orchestration</title>
+<meta name="description" content="Toxic-Joker — Red team tooling & AI orchestration. Multi-agent security frameworks, OS hardening, cryptography, network security.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128123;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">~/toxic-joker</a>
+    <div class="nav-links">
+      <a href="#about">about</a>
+      <a href="#projects">projects</a>
+      <a href="#coursework">coursework</a>
+      <a href="#stack">stack</a>
+      <a href="https://github.com/Toxic-Joker" class="nav-cta" target="_blank" rel="noopener">github</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top" class="hero">
+  <div class="hero-inner">
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+        <span class="terminal-title">toxic-joker@efrei:~</span>
+      </div>
+      <div class="terminal-body">
+        <p><span class="prompt">$</span> <span class="cmd">whoami</span></p>
+        <p class="out">UNKNOWN Hat — breaking things to understand how to harden them</p>
+        <p><span class="prompt">$</span> <span id="typed" class="cmd"></span><span class="cursor">&#9608;</span></p>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">./view_projects.sh</a>
+      <a href="https://github.com/Toxic-Joker" class="btn btn-ghost" target="_blank" rel="noopener">github_profile &#8599;</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section id="about" class="section">
+    <h2><span class="tag">$</span> cat about.md</h2>
+    <ul class="about-list">
+      <li><span class="bullet">&#128308;</span><span class="about-text">Building <strong>multi-agent red team orchestration</strong> — LLMs are consultative only; severity, risk, and report structure stay deterministic and tied to tool evidence.</span></li>
+      <li><span class="bullet">&#128737;&#65039;</span><span class="about-text">Hands-on with <strong>OS hardening</strong>, <strong>network security</strong>, and <strong>cryptography</strong> — EFREI cybersecurity Master's coursework.</span></li>
+      <li><span class="bullet">&#128051;</span><span class="about-text">Docker-first workflows, FastAPI + LangGraph for agent orchestration.</span></li>
+      <li><span class="bullet">&#127918;</span><span class="about-text">Occasionally ship things purely for fun — like a real-time OBS broadcast overlay system.</span></li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section">
+    <h2><span class="tag">$</span> ls -la ./projects</h2>
+    <div class="cards">
+
+      <article class="card card-featured">
+        <div class="card-head">
+          <span class="card-flag">FEATURED &middot; MASTER'S THESIS</span>
+          <h3><a href="https://github.com/Toxic-Joker/redteam-ai-framework" target="_blank" rel="noopener">redteam-ai-framework</a></h3>
+        </div>
+        <p>Multi-agent red team orchestration framework. A local LLM (<code>qwen3.5:9b</code>) is purely <strong>consultative</strong> — it summarizes, drafts, and suggests leads. Every consequential decision (a finding's severity, the mission's overall risk, the report's structure) is <strong>deterministic</strong>, grounded in evidence produced by real tools: nmap, gobuster, nikto, sqlmap, ffuf.</p>
+        <p class="card-meta">Docker-first · LangGraph orchestrator · originated as an EFREI Master's thesis</p>
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">Docker</span>
+          <span class="badge">LangGraph</span>
+          <span class="badge">FastAPI</span>
+          <span class="badge">Ollama</span>
+        </div>
+        <a class="card-link" href="https://github.com/Toxic-Joker/redteam-ai-framework" target="_blank" rel="noopener">view repo &rarr;</a>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <span class="card-flag">SIDE PROJECT</span>
+          <h3><a href="https://github.com/Toxic-Joker/inplay-studio" target="_blank" rel="noopener">inplay-studio</a></h3>
+        </div>
+        <p>Self-hosted, real-time football broadcast overlay system for streamers. Bridges a live data feed to OBS Studio, triggering broadcast-grade graphics — scoreboard, goal/card/sub animations, stats, standings, lineups, penalty shootouts, knockout brackets — from a single control panel. Ships both 16:9 and 9:16 overlay formats.</p>
+        <div class="badges">
+          <span class="badge">Node.js</span>
+          <span class="badge">WebSockets</span>
+          <span class="badge">OBS</span>
+        </div>
+        <a class="card-link" href="https://github.com/Toxic-Joker/inplay-studio" target="_blank" rel="noopener">view repo &rarr;</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="coursework" class="section">
+    <h2><span class="tag">$</span> find ./EFREI -name "*.md"</h2>
+    <p class="section-sub">Lab work and coursework from EFREI's cybersecurity Master's program (M1 &amp; M2).</p>
+    <div class="lab-grid">
+
+      <a class="lab" href="https://github.com/Toxic-Joker/Analyse-de-Malwares" target="_blank" rel="noopener">
+        <span class="lab-year">M2 &middot; 2025&ndash;2026</span>
+        <span class="lab-name">Analyse de Malwares</span>
+        <span class="lab-desc">Malware analysis labs — ongoing coursework</span>
+      </a>
+
+      <a class="lab" href="https://github.com/Toxic-Joker/Mise-en-pratique-et-s-curit-des-conteneurs" target="_blank" rel="noopener">
+        <span class="lab-year">M1 &middot; 2024&ndash;2025</span>
+        <span class="lab-name">Container Security</span>
+        <span class="lab-desc">Advanced Docker, image diving, container standards</span>
+      </a>
+
+      <a class="lab" href="https://github.com/Toxic-Joker/Hardening-d-OS" target="_blank" rel="noopener">
+        <span class="lab-year">M1 &middot; 2024&ndash;2025</span>
+        <span class="lab-name">OS Hardening</span>
+        <span class="lab-desc">Hardening basics, syscalls, isolation, SELinux</span>
+      </a>
+
+      <a class="lab" href="https://github.com/Toxic-Joker/Cryptographie" target="_blank" rel="noopener">
+        <span class="lab-year">M1 &middot; 2024&ndash;2025</span>
+        <span class="lab-name">Cryptography</span>
+        <span class="lab-desc">OpenSSL, PKI</span>
+      </a>
+
+      <a class="lab" href="https://github.com/Toxic-Joker/Securite_Reseaux" target="_blank" rel="noopener">
+        <span class="lab-year">EFREI</span>
+        <span class="lab-name">Network Security</span>
+        <span class="lab-desc">Cisco / GNS3 labs, VLANs, common network attacks</span>
+      </a>
+
+      <a class="lab" href="https://github.com/Toxic-Joker/DevSecOps" target="_blank" rel="noopener">
+        <span class="lab-year">EFREI</span>
+        <span class="lab-name">DevSecOps</span>
+        <span class="lab-desc">Security integrated into the delivery pipeline</span>
+      </a>
+
+    </div>
+  </section>
+
+  <section id="stack" class="section">
+    <h2><span class="tag">$</span> ls stack/</h2>
+    <div class="stack-row">
+      <span class="stack-item">Python</span>
+      <span class="stack-item">Docker</span>
+      <span class="stack-item">FastAPI</span>
+      <span class="stack-item">LangGraph</span>
+      <span class="stack-item">Ollama</span>
+      <span class="stack-item">Node.js</span>
+      <span class="stack-item">Linux</span>
+      <span class="stack-item">Bash</span>
+      <span class="stack-item">Git</span>
+      <span class="stack-item">SELinux</span>
+      <span class="stack-item">OpenSSL / PKI</span>
+      <span class="stack-item">Cisco / GNS3</span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <a href="https://github.com/Toxic-Joker" target="_blank" rel="noopener">github.com/Toxic-Joker</a>
+  <p class="footer-close">&gt; connection closed_</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
