@@ -29,6 +29,33 @@ body {
 a { color: var(--fg); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+#particles-js {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  z-index: 0;
+}
+#particles-js canvas {
+  display: block;
+}
+
+.nav, .hero, main, .footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* .hero and main are full-width wrappers with large empty margins where
+   the particle canvas should still receive hover/click — let events pass
+   through them and only capture on the actual centered content. */
+.hero, main {
+  pointer-events: none;
+}
+.hero-inner, .section {
+  pointer-events: auto;
+}
+
 code {
   font-family: var(--font);
   background: #0f1512;
