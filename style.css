@@ -275,6 +275,13 @@ code {
 .lab-year { color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; }
 .lab-name { color: var(--text); font-weight: 600; }
 .lab-desc { color: var(--muted); font-size: 0.85rem; }
+.lab-locked {
+  cursor: default;
+  border-style: dashed;
+  opacity: 0.7;
+}
+.lab-locked:hover { border-color: var(--panel-border); }
+.lab-locked .lab-name { color: var(--muted); }
 
 /* Stack */
 .stack-row {
