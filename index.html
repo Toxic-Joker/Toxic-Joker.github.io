@@ -101,13 +101,27 @@
           <span class="card-flag">SIDE PROJECT</span>
           <h3><a href="https://github.com/Toxic-Joker/tv-home-debloat" target="_blank" rel="noopener">tv-home-debloat</a></h3>
         </div>
-        <p>Reversible Google TV debloat over ADB, paired with a fast, minimal Apple TV-style launcher written in plain Java. Apps are only disabled (<code>pm disable-user</code>), never uninstalled — everything restores from a snapshot. Per-device profiles handle package lists, remote-button remapping, and a quick-settings panel via a small accessibility service.</p>
+        <p>Reversible Google TV debloat over ADB, paired with a fast, minimal launcher written in plain Java — three switchable home styles (Cinema, Glass, Top Shelf), a self-healing key service, and a quick-settings control centre. Apps are only disabled (<code>pm disable-user</code>), never uninstalled. <code>maintain.sh</code> re-applies the debloat automatically after firmware or app updates, cron-scheduled.</p>
         <div class="badges">
           <span class="badge">Java</span>
           <span class="badge">Android</span>
           <span class="badge">ADB</span>
         </div>
         <a class="card-link" href="https://github.com/Toxic-Joker/tv-home-debloat" target="_blank" rel="noopener">view repo &rarr;</a>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <span class="card-flag">SIDE PROJECT</span>
+          <h3><a href="https://github.com/Toxic-Joker/security-checkup" target="_blank" rel="noopener">security-checkup</a></h3>
+        </div>
+        <p>A Claude Code skill that runs a full, read-only security checkup of a Windows PC, local projects, and a GitHub account — checked against the vulnerabilities currently in the news. Covers OS hardening state, dependency audits across every local project, and GitHub account hygiene (rogue branches, unpinned Actions, exposed secrets, Dependabot). Ends in a priority-ordered fix list and a CRITICAL/HIGH/MEDIUM/LOW score — never changes a setting itself, just hands you the exact steps.</p>
+        <div class="badges">
+          <span class="badge">PowerShell</span>
+          <span class="badge">Bash</span>
+          <span class="badge">Claude Code skill</span>
+        </div>
+        <a class="card-link" href="https://github.com/Toxic-Joker/security-checkup" target="_blank" rel="noopener">view repo &rarr;</a>
       </article>
 
     </div>
@@ -119,9 +133,15 @@
     <ul class="about-list">
       <li><span class="bullet">&#129302;</span><span class="about-text">This site — copy, structure, and the interactive background — was designed and built end-to-end through AI pair programming, iterated live rather than hand-coded from scratch.</span></li>
       <li><span class="bullet">&#128296;</span><span class="about-text">Same philosophy as <a href="https://github.com/Toxic-Joker/redteam-ai-framework" target="_blank" rel="noopener">redteam-ai-framework</a>: AI drafts and suggests, deterministic logic and real evidence decide — automation you can trust, not a black box.</span></li>
-      <li><span class="bullet">&#9881;&#65039;</span><span class="about-text">Build custom Claude Code skills and agent tooling to automate work that used to take hours by hand — see below.</span></li>
+      <li><span class="bullet">&#9881;&#65039;</span><span class="about-text">Build custom Claude Code skills and agent tooling to automate work that used to take hours by hand — <a href="https://github.com/Toxic-Joker/security-checkup" target="_blank" rel="noopener">security-checkup</a> is a public one, the rest are below.</span></li>
     </ul>
     <div class="lab-grid">
+
+      <a class="lab" href="https://github.com/Toxic-Joker/security-checkup" target="_blank" rel="noopener">
+        <span class="lab-year">Tooling &middot; Public</span>
+        <span class="lab-name">security-checkup</span>
+        <span class="lab-desc">Read-only security audit skill — PC, projects, and GitHub, scored and prioritized</span>
+      </a>
 
       <div class="lab lab-locked">
         <span class="lab-year">Tooling &middot; &#128274; Private</span>
@@ -201,6 +221,7 @@
       <span class="stack-item">Android / ADB</span>
       <span class="stack-item">Linux</span>
       <span class="stack-item">Bash</span>
+      <span class="stack-item">PowerShell</span>
       <span class="stack-item">Git</span>
       <span class="stack-item">SELinux</span>
       <span class="stack-item">OpenSSL / PKI</span>
