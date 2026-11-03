@@ -17,6 +17,10 @@
 
 html { scroll-behavior: smooth; }
 
+/* Hidden until i18n.js picks a language and applies it, to avoid a flash
+   of the wrong language on first paint. Removed the moment it runs. */
+html.i18n-loading body { visibility: hidden; }
+
 body {
   margin: 0;
   background: var(--bg);
@@ -86,6 +90,8 @@ code {
 .nav-logo {
   color: var(--fg);
   font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .nav-logo:hover { text-decoration: none; opacity: 0.85; }
 .nav-links {
@@ -93,6 +99,13 @@ code {
   gap: 20px;
   align-items: center;
   font-size: 0.9rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-links a, .nav-links .lang-toggle, .nav-links .nav-cta {
+  flex-shrink: 0;
 }
 .nav-links a { color: var(--muted); }
 .nav-links a:hover { color: var(--fg); text-decoration: none; }
@@ -103,6 +116,29 @@ code {
   color: var(--fg) !important;
 }
 .nav-cta:hover { background: rgba(0, 255, 102, 0.08); }
+
+.lang-toggle {
+  display: flex;
+  border: 1px solid var(--panel-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.lang-toggle button {
+  font-family: var(--font);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  padding: 5px 9px;
+  cursor: pointer;
+}
+.lang-toggle button:not(:first-child) { border-left: 1px solid var(--panel-border); }
+.lang-toggle button:hover { color: var(--text); }
+.lang-toggle button.active {
+  color: #04140a;
+  background: var(--fg);
+}
 
 /* Hero */
 .hero {
@@ -314,7 +350,8 @@ code {
 }
 
 @media (max-width: 640px) {
-  .nav-links { gap: 12px; font-size: 0.82rem; }
+  .nav-links { gap: 10px; font-size: 0.8rem; }
+  .lang-toggle button { padding: 4px 7px; }
   .lab-grid { grid-template-columns: 1fr; }
   .hero { padding: 44px 16px 30px; }
 }

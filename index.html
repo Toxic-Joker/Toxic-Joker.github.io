@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="i18n-loading">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,11 +19,15 @@
   <div class="nav-inner">
     <a href="#top" class="nav-logo">~/toxic-joker</a>
     <div class="nav-links">
-      <a href="#about">about</a>
-      <a href="#projects">projects</a>
-      <a href="#automation">automation</a>
-      <a href="#coursework">coursework</a>
-      <a href="#stack">stack</a>
+      <a href="#about" data-i18n="nav.about">about</a>
+      <a href="#projects" data-i18n="nav.projects">projects</a>
+      <a href="#automation" data-i18n="nav.automation">automation</a>
+      <a href="#coursework" data-i18n="nav.coursework">coursework</a>
+      <a href="#stack" data-i18n="nav.stack">stack</a>
+      <div class="lang-toggle">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="fr">FR</button>
+      </div>
       <a href="https://github.com/Toxic-Joker" class="nav-cta" target="_blank" rel="noopener">github</a>
     </div>
   </div>
@@ -38,7 +42,7 @@
       </div>
       <div class="terminal-body">
         <p><span class="prompt">$</span> <span class="cmd">whoami</span></p>
-        <p class="out">UNKNOWN Hat — breaking things to understand how to harden them</p>
+        <p class="out" data-i18n="hero.whoamiOut">UNKNOWN Hat — breaking things to understand how to harden them</p>
         <p><span class="prompt">$</span> <span id="typed" class="cmd"></span><span class="cursor">&#9608;</span></p>
       </div>
     </div>
@@ -54,10 +58,10 @@
   <section id="about" class="section">
     <h2><span class="tag">$</span> cat about.md</h2>
     <ul class="about-list">
-      <li><span class="bullet">&#128308;</span><span class="about-text">Building <strong>multi-agent red team orchestration</strong> — LLMs are consultative only; severity, risk, and report structure stay deterministic and tied to tool evidence.</span></li>
-      <li><span class="bullet">&#128737;&#65039;</span><span class="about-text">Hands-on with <strong>OS hardening</strong>, <strong>network security</strong>, and <strong>cryptography</strong> — graduate-level cybersecurity coursework.</span></li>
-      <li><span class="bullet">&#128051;</span><span class="about-text">Docker-first workflows, FastAPI + LangGraph for agent orchestration.</span></li>
-      <li><span class="bullet">&#127918;</span><span class="about-text">Occasionally ship things purely for fun — like a real-time OBS broadcast overlay system.</span></li>
+      <li><span class="bullet">&#128308;</span><span class="about-text" data-i18n="about.b1">Building <strong>multi-agent red team orchestration</strong> — LLMs are consultative only; severity, risk, and report structure stay deterministic and tied to tool evidence.</span></li>
+      <li><span class="bullet">&#128737;&#65039;</span><span class="about-text" data-i18n="about.b2">Hands-on with <strong>OS hardening</strong>, <strong>network security</strong>, and <strong>cryptography</strong> — graduate-level cybersecurity coursework.</span></li>
+      <li><span class="bullet">&#128051;</span><span class="about-text" data-i18n="about.b3">Docker-first workflows, FastAPI + LangGraph for agent orchestration.</span></li>
+      <li><span class="bullet">&#127918;</span><span class="about-text" data-i18n="about.b4">Occasionally ship things purely for fun — like a real-time OBS broadcast overlay system.</span></li>
     </ul>
   </section>
 
@@ -67,11 +71,11 @@
 
       <article class="card card-featured">
         <div class="card-head">
-          <span class="card-flag">FEATURED PROJECT</span>
+          <span class="card-flag" data-i18n="project.flag.featured">FEATURED PROJECT</span>
           <h3><a href="https://github.com/Toxic-Joker/redteam-ai-framework" target="_blank" rel="noopener">redteam-ai-framework</a></h3>
         </div>
-        <p>Multi-agent red team orchestration framework with a live web dashboard. A local LLM (<code>qwen3.5:9b</code>) is purely <strong>consultative</strong> — it summarizes, drafts, and suggests leads. Every consequential decision (a finding's severity, the mission's overall risk, the report's structure) is <strong>deterministic</strong>, grounded in evidence produced by real tools: nmap, gobuster, nikto, sqlmap, ffuf. Passed its own security audit: auth bypasses closed, timing-safe comparisons, non-root container.</p>
-        <p class="card-meta">Docker-first · LangGraph orchestrator · originated as an academic research project</p>
+        <p data-i18n="project.redteam.desc">Multi-agent red team orchestration framework with a live web dashboard. A local LLM (<code>qwen3.5:9b</code>) is purely <strong>consultative</strong> — it summarizes, drafts, and suggests leads. Every consequential decision (a finding's severity, the mission's overall risk, the report's structure) is <strong>deterministic</strong>, grounded in evidence produced by real tools: nmap, gobuster, nikto, sqlmap, ffuf. Passed its own security audit: auth bypasses closed, timing-safe comparisons, non-root container.</p>
+        <p class="card-meta" data-i18n="project.redteam.meta">Docker-first · LangGraph orchestrator · originated as an academic research project</p>
         <div class="badges">
           <span class="badge">Python</span>
           <span class="badge">Docker</span>
@@ -79,77 +83,77 @@
           <span class="badge">FastAPI</span>
           <span class="badge">Ollama</span>
         </div>
-        <a class="card-link" href="https://github.com/Toxic-Joker/redteam-ai-framework" target="_blank" rel="noopener">view repo &rarr;</a>
+        <a class="card-link" href="https://github.com/Toxic-Joker/redteam-ai-framework" target="_blank" rel="noopener" data-i18n="common.viewRepo">view repo &rarr;</a>
       </article>
 
       <article class="card">
         <div class="card-head">
-          <span class="card-flag">SIDE PROJECT</span>
+          <span class="card-flag" data-i18n="project.flag.side">SIDE PROJECT</span>
           <h3><a href="https://github.com/Toxic-Joker/security-checkup" target="_blank" rel="noopener">security-checkup</a></h3>
         </div>
-        <p>A Claude Code skill that runs a full, read-only security checkup of a Windows PC, local projects, and a GitHub account — checked against the vulnerabilities currently in the news. Covers OS hardening state, dependency audits across every local project, and GitHub account hygiene (rogue branches, unpinned Actions, exposed secrets, Dependabot). Ends in a priority-ordered fix list and a CRITICAL/HIGH/MEDIUM/LOW score — never changes a setting itself, just hands you the exact steps.</p>
+        <p data-i18n="project.securitycheckup.desc">A Claude Code skill that runs a full, read-only security checkup of a Windows PC, local projects, and a GitHub account — checked against the vulnerabilities currently in the news. Covers OS hardening state, dependency audits across every local project, and GitHub account hygiene (rogue branches, unpinned Actions, exposed secrets, Dependabot). Ends in a priority-ordered fix list and a CRITICAL/HIGH/MEDIUM/LOW score — never changes a setting itself, just hands you the exact steps.</p>
         <div class="badges">
           <span class="badge">PowerShell</span>
           <span class="badge">Bash</span>
           <span class="badge">Claude Code skill</span>
         </div>
-        <a class="card-link" href="https://github.com/Toxic-Joker/security-checkup" target="_blank" rel="noopener">view repo &rarr;</a>
+        <a class="card-link" href="https://github.com/Toxic-Joker/security-checkup" target="_blank" rel="noopener" data-i18n="common.viewRepo">view repo &rarr;</a>
       </article>
 
       <article class="card">
         <div class="card-head">
-          <span class="card-flag">SIDE PROJECT</span>
+          <span class="card-flag" data-i18n="project.flag.side">SIDE PROJECT</span>
           <h3><a href="https://github.com/Toxic-Joker/email-osint" target="_blank" rel="noopener">email-osint</a></h3>
         </div>
-        <p>Free, self-hosted reverse email lookup. Paste an email and watch a profile build live: ~220 site registrations, Google &amp; Google Play Games data, infostealer infections, and breach exposure — streamed over server-sent events, each check on its own worker thread with a 20s deadline. Local Ollama model writes the summary and risk score; nothing queried needs a paid API key, and no lookup results are stored. Served over HTTPS from a localhost-constrained local CA.</p>
+        <p data-i18n="project.emailosint.desc">Free, self-hosted reverse email lookup. Paste an email and watch a profile build live: ~220 site registrations, Google &amp; Google Play Games data, infostealer infections, and breach exposure — streamed over server-sent events, each check on its own worker thread with a 20s deadline. Local Ollama model writes the summary and risk score; nothing queried needs a paid API key, and no lookup results are stored. Served over HTTPS from a localhost-constrained local CA.</p>
         <div class="badges">
           <span class="badge">Python</span>
           <span class="badge">FastAPI</span>
           <span class="badge">Ollama</span>
           <span class="badge">OSINT</span>
         </div>
-        <a class="card-link" href="https://github.com/Toxic-Joker/email-osint" target="_blank" rel="noopener">view repo &rarr;</a>
+        <a class="card-link" href="https://github.com/Toxic-Joker/email-osint" target="_blank" rel="noopener" data-i18n="common.viewRepo">view repo &rarr;</a>
       </article>
 
       <article class="card">
         <div class="card-head">
-          <span class="card-flag">FORK &middot; EXTENDED</span>
+          <span class="card-flag" data-i18n="project.flag.fork">FORK &middot; EXTENDED</span>
           <h3><a href="https://github.com/Toxic-Joker/auto-identity-remove" target="_blank" rel="noopener">auto-identity-remove</a></h3>
         </div>
-        <p>Forked <a href="https://github.com/stephenlthorn/auto-identity-remove" target="_blank" rel="noopener">stephenlthorn/auto-identity-remove</a>, an automated data-broker opt-out runner, and added a human-in-the-loop handoff for CAPTCHAs (pauses for you in a headed browser instead of an API solver), a free keyless breach check via XposedOrNot, broader global/phone-number broker coverage, and a Windows launcher script.</p>
+        <p data-i18n="project.autoidentityremove.desc">Forked <a href="https://github.com/stephenlthorn/auto-identity-remove" target="_blank" rel="noopener">stephenlthorn/auto-identity-remove</a>, an automated data-broker opt-out runner, and added a human-in-the-loop handoff for CAPTCHAs (pauses for you in a headed browser instead of an API solver), a free keyless breach check via XposedOrNot, broader global/phone-number broker coverage, and a Windows launcher script.</p>
         <div class="badges">
           <span class="badge">Node.js</span>
           <span class="badge">Privacy automation</span>
         </div>
-        <a class="card-link" href="https://github.com/Toxic-Joker/auto-identity-remove" target="_blank" rel="noopener">view repo &rarr;</a>
+        <a class="card-link" href="https://github.com/Toxic-Joker/auto-identity-remove" target="_blank" rel="noopener" data-i18n="common.viewRepo">view repo &rarr;</a>
       </article>
 
       <article class="card">
         <div class="card-head">
-          <span class="card-flag">SIDE PROJECT</span>
+          <span class="card-flag" data-i18n="project.flag.side">SIDE PROJECT</span>
           <h3><a href="https://github.com/Toxic-Joker/MatchRoom" target="_blank" rel="noopener">MatchRoom</a></h3>
         </div>
-        <p>Self-hosted, real-time football broadcast overlay system for streamers. Bridges a live data feed to OBS Studio, triggering broadcast-grade graphics — scoreboard, goal/card/sub animations, stats, standings, lineups, penalty shootouts, knockout brackets — from a single control panel. Ships both 16:9 and 9:16 overlay formats.</p>
+        <p data-i18n="project.matchroom.desc">Self-hosted, real-time football broadcast overlay system for streamers. Bridges a live data feed to OBS Studio, triggering broadcast-grade graphics — scoreboard, goal/card/sub animations, stats, standings, lineups, penalty shootouts, knockout brackets — from a single control panel. Ships both 16:9 and 9:16 overlay formats.</p>
         <div class="badges">
           <span class="badge">Node.js</span>
           <span class="badge">WebSockets</span>
           <span class="badge">OBS</span>
         </div>
-        <a class="card-link" href="https://github.com/Toxic-Joker/MatchRoom" target="_blank" rel="noopener">view repo &rarr;</a>
+        <a class="card-link" href="https://github.com/Toxic-Joker/MatchRoom" target="_blank" rel="noopener" data-i18n="common.viewRepo">view repo &rarr;</a>
       </article>
 
       <article class="card">
         <div class="card-head">
-          <span class="card-flag">SIDE PROJECT</span>
+          <span class="card-flag" data-i18n="project.flag.side">SIDE PROJECT</span>
           <h3><a href="https://github.com/Toxic-Joker/tv-home-debloat" target="_blank" rel="noopener">tv-home-debloat</a></h3>
         </div>
-        <p>Reversible Google TV debloat over ADB, paired with a fast, minimal launcher written in plain Java — three switchable home styles (Cinema, Glass, Top Shelf), a self-healing key service, and a quick-settings control centre. Apps are only disabled (<code>pm disable-user</code>), never uninstalled. <code>maintain.sh</code> re-applies the debloat automatically after firmware or app updates, cron-scheduled.</p>
+        <p data-i18n="project.tvhomedebloat.desc">Reversible Google TV debloat over ADB, paired with a fast, minimal launcher written in plain Java — three switchable home styles (Cinema, Glass, Top Shelf), a self-healing key service, and a quick-settings control centre. Apps are only disabled (<code>pm disable-user</code>), never uninstalled. <code>maintain.sh</code> re-applies the debloat automatically after firmware or app updates, cron-scheduled.</p>
         <div class="badges">
           <span class="badge">Java</span>
           <span class="badge">Android</span>
           <span class="badge">ADB</span>
         </div>
-        <a class="card-link" href="https://github.com/Toxic-Joker/tv-home-debloat" target="_blank" rel="noopener">view repo &rarr;</a>
+        <a class="card-link" href="https://github.com/Toxic-Joker/tv-home-debloat" target="_blank" rel="noopener" data-i18n="common.viewRepo">view repo &rarr;</a>
       </article>
 
     </div>
@@ -157,42 +161,42 @@
 
   <section id="automation" class="section">
     <h2><span class="tag">$</span> cat automation.md</h2>
-    <p class="section-sub">Treating AI as a build tool, not a toy — shipping real automation and custom tooling with it, not just chatting with it.</p>
+    <p class="section-sub" data-i18n="automation.sub">Treating AI as a build tool, not a toy — shipping real automation and custom tooling with it, not just chatting with it.</p>
     <ul class="about-list">
-      <li><span class="bullet">&#129302;</span><span class="about-text">This site — copy, structure, and the interactive background — was designed and built end-to-end through AI pair programming, iterated live rather than hand-coded from scratch.</span></li>
-      <li><span class="bullet">&#128296;</span><span class="about-text">Same philosophy as <a href="https://github.com/Toxic-Joker/redteam-ai-framework" target="_blank" rel="noopener">redteam-ai-framework</a>: AI drafts and suggests, deterministic logic and real evidence decide — automation you can trust, not a black box.</span></li>
-      <li><span class="bullet">&#9881;&#65039;</span><span class="about-text">Build custom Claude Code skills and agent tooling to automate work that used to take hours by hand — <a href="https://github.com/Toxic-Joker/security-checkup" target="_blank" rel="noopener">security-checkup</a> is a public one, the rest are below.</span></li>
+      <li><span class="bullet">&#129302;</span><span class="about-text" data-i18n="automation.b1">This site — copy, structure, and the interactive background — was designed and built end-to-end through AI pair programming, iterated live rather than hand-coded from scratch.</span></li>
+      <li><span class="bullet">&#128296;</span><span class="about-text" data-i18n="automation.b2">Same philosophy as <a href="https://github.com/Toxic-Joker/redteam-ai-framework" target="_blank" rel="noopener">redteam-ai-framework</a>: AI drafts and suggests, deterministic logic and real evidence decide — automation you can trust, not a black box.</span></li>
+      <li><span class="bullet">&#9881;&#65039;</span><span class="about-text" data-i18n="automation.b3">Build custom Claude Code skills and agent tooling to automate work that used to take hours by hand — <a href="https://github.com/Toxic-Joker/security-checkup" target="_blank" rel="noopener">security-checkup</a> is a public one, the rest are below.</span></li>
     </ul>
     <div class="lab-grid">
 
       <a class="lab" href="https://github.com/Toxic-Joker/security-checkup" target="_blank" rel="noopener">
-        <span class="lab-year">Tooling &middot; Public</span>
+        <span class="lab-year" data-i18n="automation.lab.public">Tooling &middot; Public</span>
         <span class="lab-name">security-checkup</span>
-        <span class="lab-desc">Read-only security audit skill — PC, projects, and GitHub, scored and prioritized</span>
+        <span class="lab-desc" data-i18n="automation.lab.securitycheckup.desc">Read-only security audit skill — PC, projects, and GitHub, scored and prioritized</span>
       </a>
 
       <div class="lab lab-locked">
-        <span class="lab-year">Tooling &middot; &#128274; Private</span>
+        <span class="lab-year" data-i18n="automation.lab.private">Tooling &middot; &#128274; Private</span>
         <span class="lab-name">code-video</span>
-        <span class="lab-desc">Custom Claude Code skill — voice recording to animated short video</span>
+        <span class="lab-desc" data-i18n="automation.lab.codevideo.desc">Custom Claude Code skill — voice recording to animated short video</span>
       </div>
 
       <div class="lab lab-locked">
-        <span class="lab-year">Tooling &middot; &#128274; Private</span>
+        <span class="lab-year" data-i18n="automation.lab.private">Tooling &middot; &#128274; Private</span>
         <span class="lab-name">claude-video-editor</span>
-        <span class="lab-desc">AI-assisted video editing automation</span>
+        <span class="lab-desc" data-i18n="automation.lab.videoeditor.desc">AI-assisted video editing automation</span>
       </div>
 
       <div class="lab lab-locked">
-        <span class="lab-year">Tooling &middot; &#128274; Private</span>
+        <span class="lab-year" data-i18n="automation.lab.private">Tooling &middot; &#128274; Private</span>
         <span class="lab-name">jobscout</span>
-        <span class="lab-desc">Automated job search &amp; triage tooling</span>
+        <span class="lab-desc" data-i18n="automation.lab.jobscout.desc">Automated job search &amp; triage tooling</span>
       </div>
 
       <div class="lab lab-locked">
-        <span class="lab-year">Tooling &middot; &#128274; Private</span>
+        <span class="lab-year" data-i18n="automation.lab.private">Tooling &middot; &#128274; Private</span>
         <span class="lab-name">claude-skills</span>
-        <span class="lab-desc">Personal collection of Claude Code skills</span>
+        <span class="lab-desc" data-i18n="automation.lab.claudeskills.desc">Personal collection of Claude Code skills</span>
       </div>
 
     </div>
@@ -200,43 +204,43 @@
 
   <section id="coursework" class="section">
     <h2><span class="tag">$</span> find ./coursework -name "*.md"</h2>
-    <p class="section-sub">Lab work from a cybersecurity Master's program.</p>
+    <p class="section-sub" data-i18n="coursework.sub">Lab work from a cybersecurity Master's program.</p>
     <div class="lab-grid">
 
       <a class="lab" href="https://github.com/Toxic-Joker/Analyse-de-Malwares" target="_blank" rel="noopener">
-        <span class="lab-year">Coursework</span>
-        <span class="lab-name">Malware Analysis</span>
-        <span class="lab-desc">Malware analysis labs — ongoing coursework</span>
+        <span class="lab-year" data-i18n="coursework.lab.public">Coursework</span>
+        <span class="lab-name" data-i18n="coursework.lab.malware.name">Malware Analysis</span>
+        <span class="lab-desc" data-i18n="coursework.lab.malware.desc">Malware analysis labs — ongoing coursework</span>
       </a>
 
       <div class="lab lab-locked">
-        <span class="lab-year">Coursework &middot; &#128274; Private</span>
-        <span class="lab-name">Container Security</span>
-        <span class="lab-desc">Advanced Docker, image diving, container standards</span>
+        <span class="lab-year" data-i18n="coursework.lab.private">Coursework &middot; &#128274; Private</span>
+        <span class="lab-name" data-i18n="coursework.lab.container.name">Container Security</span>
+        <span class="lab-desc" data-i18n="coursework.lab.container.desc">Advanced Docker, image diving, container standards</span>
       </div>
 
       <a class="lab" href="https://github.com/Toxic-Joker/Hardening-d-OS" target="_blank" rel="noopener">
-        <span class="lab-year">Coursework</span>
-        <span class="lab-name">OS Hardening</span>
-        <span class="lab-desc">Hardening basics, syscalls, isolation, SELinux</span>
+        <span class="lab-year" data-i18n="coursework.lab.public">Coursework</span>
+        <span class="lab-name" data-i18n="coursework.lab.oshardening.name">OS Hardening</span>
+        <span class="lab-desc" data-i18n="coursework.lab.oshardening.desc">Hardening basics, syscalls, isolation, SELinux</span>
       </a>
 
       <a class="lab" href="https://github.com/Toxic-Joker/Cryptographie" target="_blank" rel="noopener">
-        <span class="lab-year">Coursework</span>
-        <span class="lab-name">Cryptography</span>
-        <span class="lab-desc">OpenSSL, PKI</span>
+        <span class="lab-year" data-i18n="coursework.lab.public">Coursework</span>
+        <span class="lab-name" data-i18n="coursework.lab.crypto.name">Cryptography</span>
+        <span class="lab-desc" data-i18n="coursework.lab.crypto.desc">OpenSSL, PKI</span>
       </a>
 
       <a class="lab" href="https://github.com/Toxic-Joker/Securite_Reseaux" target="_blank" rel="noopener">
-        <span class="lab-year">Coursework</span>
-        <span class="lab-name">Network Security</span>
-        <span class="lab-desc">Cisco / GNS3 labs, VLANs, common network attacks</span>
+        <span class="lab-year" data-i18n="coursework.lab.public">Coursework</span>
+        <span class="lab-name" data-i18n="coursework.lab.network.name">Network Security</span>
+        <span class="lab-desc" data-i18n="coursework.lab.network.desc">Cisco / GNS3 labs, VLANs, common network attacks</span>
       </a>
 
       <div class="lab lab-locked">
-        <span class="lab-year">Coursework &middot; &#128274; Private</span>
-        <span class="lab-name">DevSecOps</span>
-        <span class="lab-desc">Security integrated into the delivery pipeline</span>
+        <span class="lab-year" data-i18n="coursework.lab.private">Coursework &middot; &#128274; Private</span>
+        <span class="lab-name" data-i18n="coursework.lab.devsecops.name">DevSecOps</span>
+        <span class="lab-desc" data-i18n="coursework.lab.devsecops.desc">Security integrated into the delivery pipeline</span>
       </div>
 
     </div>
@@ -267,11 +271,13 @@
 
 <footer class="footer">
   <a href="https://github.com/Toxic-Joker" target="_blank" rel="noopener">github.com/Toxic-Joker</a>
-  <p class="footer-close">&gt; connection closed_</p>
+  <p class="footer-close" data-i18n="footer.close">&gt; connection closed_</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script src="particles-config.js"></script>
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
