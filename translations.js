@@ -34,6 +34,8 @@ window.TRANSLATIONS = {
 
     "project.matchroom.desc": "Self-hosted, real-time football broadcast overlay system for streamers. Bridges a live data feed to OBS Studio, triggering broadcast-grade graphics — scoreboard, goal/card/sub animations, stats, standings, lineups, penalty shootouts, knockout brackets — from a single control panel. Ships both 16:9 and 9:16 overlay formats.",
 
+    "project.obsbrandkit.desc": "One <code>brand.json</code> in, a complete animated stream package out: an OBS scene collection and a Streamlabs overlay, both horizontal and vertical (Aitum Vertical canvas) from the same config. Animated starting/BRB/ending screens, stingers, frames, and lower thirds — no paid packs, no leaked keys. A separate pass wires a built kit to the streamer's actual tools: alert box, chat, now-playing, sound alerts, cameras.",
+
     "project.tvhomedebloat.desc": "Reversible Google TV debloat over ADB, paired with a fast, minimal launcher written in plain Java — three switchable home styles (Cinema, Glass, Top Shelf), a self-healing key service, and a quick-settings control centre. Apps are only disabled (<code>pm disable-user</code>), never uninstalled. <code>maintain.sh</code> re-applies the debloat automatically after firmware or app updates, cron-scheduled.",
 
     "automation.sub": "Treating AI as a build tool, not a toy — shipping real automation and custom tooling with it, not just chatting with it.",
@@ -105,6 +107,8 @@ window.TRANSLATIONS = {
     "project.autoidentityremove.desc": "Fork de <a href=\"https://github.com/stephenlthorn/auto-identity-remove\" target=\"_blank\" rel=\"noopener\">stephenlthorn/auto-identity-remove</a>, un outil d'opt-out automatisé auprès des data brokers, auquel j'ai ajouté une prise de relais humaine pour les CAPTCHA (le script se met en pause pour vous laisser faire dans un navigateur visible, au lieu d'un solveur payant), une vérification de fuites gratuite et sans clé via XposedOrNot, une couverture élargie des brokers (international, numéros de téléphone), et un script de lancement pour Windows.",
 
     "project.matchroom.desc": "Système d'habillage de diffusion de football en temps réel, auto-hébergé, pour les streamers. Relie un flux de données en direct à OBS Studio pour déclencher des graphismes dignes d'une diffusion pro — tableau de score, animations de but/carton/remplacement, stats, classements, compositions, tirs au but, tableaux à élimination directe — depuis un panneau de contrôle unique. Disponible en 16:9 et 9:16.",
+
+    "project.obsbrandkit.desc": "Un <code>brand.json</code> en entrée, un pack de stream animé complet en sortie : une collection de scènes OBS et un overlay Streamlabs, en horizontal et en vertical (canvas Aitum Vertical) à partir de la même config. Écrans de démarrage/BRB/fin animés, transitions, cadres et bandeaux — sans pack payant, sans clé qui fuite. Une passe séparée relie un kit déjà construit aux outils réels du streamer : boîte d'alertes, chat, now-playing, alertes sonores, caméras.",
 
     "project.tvhomedebloat.desc": "Débloatage réversible de Google TV via ADB, associé à un launcher rapide et minimaliste écrit en Java pur — trois styles d'accueil interchangeables (Cinema, Glass, Top Shelf), un service de touches auto-réparant, et un centre de contrôle pour les réglages rapides. Les applications sont seulement désactivées (<code>pm disable-user</code>), jamais désinstallées. <code>maintain.sh</code> réapplique le débloatage automatiquement après une mise à jour du firmware ou des apps, planifié via cron.",
 
